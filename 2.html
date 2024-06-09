@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пристрої</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe; 
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .content {
+            padding-top: 60px; /* Відступ зверху для навігаційної стрічки */
+        }
+        .device {
+            text-align: center;
+            margin: 20px;
+        }
+        .device img {
+            max-width: 300px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+        .device-title {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .device-description {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        /* Різні кольори та шрифти для кожного пристрою */
+        .monitor-description {
+            color: #FF5733;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .keyboard-description {
+            color: #33FF57;
+            font-family: 'Georgia', serif;
+        }
+        .mouse-description {
+            color: #3357FF;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .printer-description {
+            color: #FF33A6;
+            font-family: 'Verdana', Geneva, sans-serif;
+        }
+        .scanner-description {
+            color: #FFC300;
+            font-family: 'Tahoma', Geneva, sans-serif;
+        }
+        .webcam-description {
+            color: #DAF7A6;
+            font-family: 'Lucida Console', Monaco, monospace;
+        }
+        .graphic-tablet-description {
+            color: #581845;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+        .speakers-description {
+            color: #C70039;
+            font-family: 'Impact', Charcoal, sans-serif;
+        }
+        .microphone-description {
+            color: #900C3F;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Верхня навігаційна стрічка -->
+<div class="navbar">
+    <a href="1.html">Головна</a>
+    <a onclick="openModal('aboutMeModal')">Про мене</a>
+    <a href="2.html">Пристрої</a>
+    <a href="3.html">Детальніше</a>
+</div>
+
+<!-- Випливаюче вікно "Про мене" -->
+<div id="aboutMeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutMeModal')">&times;</span>
+    <h2>Про мене</h2>
+    <img src="1.jpg" alt="Моя фотографія" style="max-width: 100%; height: auto;">
+    <p>Я Кузьомка Ірина мені 17років. Я навчаюся у Вищому професійному училищі №1, яке знаходиться в м.Рівне.</p>
+  </div>
+</div>
+
+<!-- Основний вміст сторінки -->
+<div class="content">
+    <div class="device">
+        <img src="https://compx.ua/content/uploads/images/snimok-ekrana-2022-07-11-v-15.11.50.png" alt="Монітор">
+        <div class="device-title">Монітор</div>
+        <div class="device-description monitor-description">Монітор — це пристрій для візуального відображення інформації.</div>
+    </div>
+    <div class="device">
+        <img src="https://i.moyo.ua/img/gallery/5358/13/1761579_middle.jpg" alt="Клавіатура">
+        <div class="device-title">Клавіатура</div>
+        <div class="device-description keyboard-description">Клавіатура — це пристрій введення текстової інформації.</div>
+    </div>
+    <div class="device">
+        <img src="https://images.prom.ua/3133910002_w640_h640_besprovodnaya-kompyuternaya-mysh.jpg" alt="Мишка">
+        <div class="device-title">Мишка</div>
+        <div class="device-description mouse-description">Мишка — це пристрій для керування курсором на екрані.</div>
+    </div>
+    <div class="device">
+        <img src="https://images.satu.kz/189577454_hp-9yf82a-printer.jpg" alt="Принтер">
+        <div class="device-title">Принтер</div>
+        <div class="device-description printer-description">Принтер — це пристрій для друку тексту та зображень на папері.</div>
+    </div>
+    <div class="device">
+        <img src="https://content.rozetka.com.ua/goods/images/original/90431925.jpg" alt="Сканер">
+        <div class="device-title">Сканер</div>
+        <div class="device-description scanner-description">Сканер — це пристрій для оцифровування зображень та тексту.</div>
+    </div>
+    <div class="device">
+        <img src="https://a.allegroimg.com/original/113a9a/6800a58d4499a1a4a179d0fc09fb/Kamerka-Kamera-INTERNETOWA-PC-2MPIX-1080p-MIKROFON" alt="Веб-камера">
+        <div class="device-title">Веб-камера</div>
+        <div class="device-description webcam-description">Веб-камера — це пристрій для передачі відео через інтернет.</div>
+    </div>
+    <div class="device">
+        <img src="https://hotline.ua/img/uploads/clients/12=60bf8fa5d7130.jpg" alt="Графічний планшет">
+        <div class="device-title">Графічний планшет</div>
+        <div class="device-description graphic-tablet-description">Графічний планшет — це пристрій для цифрового малювання.</div>
+    </div>
+    <div class="device">
+        <img src="https://img.moyo.ua/img/news_desc/1658/165874_1628589544_0.png" alt="Колонки">
+        <div class="device-title">Колонки</div>
+        <div class="device-description speakers-description">Колонки — це пристрої для відтворення звуку.</div>
+    </div>
+    <div class="device">
+        <img src="https://root-nation.com/wp-content/uploads/2021/02/10-best-microphones-for-streaming.jpg" alt="Мікрофон">
+        <div class="device-title">Мікрофон</div>
+        <div class="device-description microphone-description">Мікрофон — це пристрій для запису звуку.</div>
+    </div>
+</div>
+
+<script>
+// JavaScript для відкриття та закриття випливаючого вікна
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Закриття вікна, якщо користувач клікає поза вікном
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

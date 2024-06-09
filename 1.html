@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; /* Adjusted height for the image container */
+            position: relative;
+            margin-bottom: 5vh; /* Reduce the margin to bring the text closer */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            position: absolute; /* Changed to absolute positioning */
+            top: 0; /* Align with the top of the viewport */
+            left: 0;
+            right: 0;
+            bottom: auto; /* Ensure the bottom is not fixed */
+            text-align: center;
+            color: white;
+            height: 50vh; /* Set height to fill 50% of the viewport height */
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+        }
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .additional-text {
+            color: pink;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin-top: 5vh; /* Reduce the top margin to bring text closer */
+            text-align: center;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Верхня навігаційна стрічка -->
+<div class="navbar">
+    <a href="1.html">Головна</a>
+    <a onclick="openModal('aboutMeModal')">Про мене</a>
+    <a href="2.html">Пристрої</a>
+    <a href="3.html">Детальніше</a>
+</div>
+
+<!-- Випливаюче вікно "Про мене" -->
+<div id="aboutMeModal" class="modal">
+  <!-- Вміст випливаючого вікна -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutMeModal')">&times;</span>
+    <h2>Про мене</h2>
+    <img src="1.jpg" alt="Моя фотографія" style="max-width: 100%; height: auto;">
+    <p>Я Кузьомка Ірина мені 17 років. Я навчаюся у Вищому професійному училищі №1, яке знаходиться в м. Рівне.</p>
+  </div>
+</div>
+
+<!-- Основний вміст сторінки -->
+<div class="center" id="diploma">
+    <div class="image-container">
+        <img src="https://dev.ua/storage/images/58/10/12/28/derived/217bc1edc525310de38e6bb967dff8b3.jpg" alt="Дипломна робота">
+        <div class="centered-text">
+            "Маніпулятори для взаємодії з об'єктами на екрані монітора"<br>Студентка групи №11<br>Кузьомки Ірини Миколаївної<br>
+        </div>
+    </div>
+</div>
+
+<!-- Додатковий текст під фотографією -->
+<div class="additional-text">
+    Маніпулятори для взаємодії з об'єктами на екрані монітора — це пристрої, які дозволяють користувачу керувати елементами інтерфейсу комп'ютера. Вони забезпечують зручність та точність роботи з програмами і файлами. Основні види маніпуляторів включають мишу, яка є найпоширенішим пристроєм для навігації та вибору об'єктів на екрані і може бути оптичною або лазерною, провідною чи безпровідною; трекпад (тачпад), вбудований у більшість ноутбуків, який працює за принципом сенсорної панелі, що реагує на дотик пальців; трекбол, який є пристроєм, подібним до перевернутої миші, де користувач обертає кульку для переміщення курсора, що забезпечує стабільність і точність. Також популярні сенсорні екрани (тачскріни), які дозволяють взаємодіяти з об'єктами на екрані безпосередньо за допомогою дотиків і використовуються в смартфонах, планшетах та деяких комп'ютерах і моніторах; графічні планшети (планшети для малювання) з ручкою (стилусом), що дозволяють малювати та писати на поверхні планшета і широко використовуються дизайнерами та художниками; джойстики, які в основному використовуються для ігор, але можуть застосовуватись для деяких професійних програм, таких як керування дронами або симуляторами. Додатково є трекпойнти (джойстики на клавіатурі), які представляють собою маленькі джойстики, розташовані між клавішами G, H та B на клавіатурі деяких ноутбуків, що дозволяють керувати курсором без потреби відривати руки від клавіатури; світлові пера (стилуси), які використовуються з сенсорними екранами або спеціальними планшетами для точного введення даних, малювання або написання; і 3D-маніпулятори, спеціальні пристрої для роботи з тривимірними об'єктами, які використовуються в CAD-програмах, для моделювання та анімації. Ці маніпулятори допомагають користувачам ефективно взаємодіяти з комп'ютерами та іншими електронними пристроями, забезпечуючи різні рівні зручності та функціональності в залежності від потреб та умов використання.
+</div>
+
+<script>
+// JavaScript для відкриття та закриття випливаючого вікна
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Закриття вікна, якщо користувач клікає поза вікном
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+}
+
+// Функція для прокручування до якорів
+function scrollToAnchor(anchorId) {
+    const element = document.getElementById(anchorId);
+    element.scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
