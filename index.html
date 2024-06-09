@@ -1,212 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Пристрої</title>
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background-color: #333;
-                color: white;
-                padding: 10px 0;
-                text-align: center;
-                z-index: 1000;
-            }
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                margin: 0 15px;
-                cursor: pointer;
-            }
-            .navbar a:hover {
-                text-decoration: underline;
-            }
-            .modal {
-                display: none; 
-                position: fixed;
-                z-index: 1000; 
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto; 
-                background-color: rgba(0,0,0,0.4); 
-            }
-            .modal-content {
-                background-color: #fefefe; 
-                margin: 15% auto; 
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%; 
-            }
-            .close {
-                color: #aaa;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-            }
-            .close:hover,
-            .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            .content {
-                padding-top: 60px; /* Відступ зверху для навігаційної стрічки */
-            }
-            .device {
-                text-align: center;
-                margin: 20px;
-            }
-            .device img {
-                max-width: 300px;
-                max-height: 300px;
-                width: auto;
-                height: auto;
-            }
-            .device-title {
-                font-size: 1.5em;
-                margin-top: 10px;
-            }
-            .device-description {
-                margin-top: 10px;
-                font-size: 1em;
-            }
-            /* Різні кольори та шрифти для кожного пристрою */
-            .monitor-description {
-                color: #FF5733;
-                font-family: 'Courier New', Courier, monospace;
-            }
-            .keyboard-description {
-                color: #33FF57;
-                font-family: 'Georgia', serif;
-            }
-            .mouse-description {
-                color: #3357FF;
-                font-family: 'Times New Roman', Times, serif;
-            }
-            .printer-description {
-                color: #FF33A6;
-                font-family: 'Verdana', Geneva, sans-serif;
-            }
-            .scanner-description {
-                color: #FFC300;
-                font-family: 'Tahoma', Geneva, sans-serif;
-            }
-            .webcam-description {
-                color: #DAF7A6;
-                font-family: 'Lucida Console', Monaco, monospace;
-            }
-            .graphic-tablet-description {
-                color: #581845;
-                font-family: 'Arial Black', Gadget, sans-serif;
-            }
-            .speakers-description {
-                color: #C70039;
-                font-family: 'Impact', Charcoal, sans-serif;
-            }
-            .microphone-description {
-                color: #900C3F;
-                font-family: 'Comic Sans MS', cursive, sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-    
-    <!-- Верхня навігаційна стрічка -->
-    <div class="navbar">
-        <a href="1.html">Головна</a>
-        <a onclick="openModal('aboutMeModal')">Про мене</a>
-        <a href="2.html">Пристрої</a>
-        <a href="3.html">Детальніше</a>
-    </div>
-    
-    <!-- Випливаюче вікно "Про мене" -->
-    <div id="aboutMeModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('aboutMeModal')">&times;</span>
-        <h2>Про мене</h2>
-        <img src="1.jpg" alt="Моя фотографія" style="max-width: 100%; height: auto;">
-        <p>Я Кузьомка Ірина мені 17років. Я навчаюся у Вищому професійному училищі №1, яке знаходиться в м.Рівне.</p>
-      </div>
-    </div>
-    
-    <!-- Основний вміст сторінки -->
-    <div class="content">
-        <div class="device">
-            <img src="https://imgs.sector.sk/files/novinky/0/2019/10-4-20-54-72//aky-monitor-kupit-na-jesen-201-207322-4796106.jpg" alt="Монітор">
-            <div class="device-title">Монітор</div>
-            <div class="device-description monitor-description">Монітор - це важлива частина комп'ютера, яка дозволяє користувачам бачити візуальний вивід від їхнього пристрою. Вони використовуються для відображення всіх видів інформації, включаючи текст, фотографії, відео та графіку. Сучасні монітори бувають кількох типів: на основі електронно-променевої трубки (CRT), рідкокристалічні (LCD, TFT як підвид LCD), плазмові, проєкційні, OLED-монітори, сенсорні. Плазмові та проєкційні монітори використовують там, де потрібен великий розмір екрана (діагональ метр і більше). Сьогодні користувачі віддають перевагу ЖК-екранів, популярністю користуються LED і OLED дисплеї.</div>
-        </div>
-        <div class="device">
-            <img src="https://journal.ilounge.ua/files/blog/mehanicheskaya-ili-membrannaya-igrovaya-klaviatura-04.webp" alt="Клавіатура">
-            <div class="device-title">Клавіатура</div>
-            <div class="device-description keyboard-description">Клавіатура - це важливий інтерфейс вводу для багатьох пристроїв, включаючи комп'ютери, смартфони та планшети. Вона дозволяє користувачам вводити текст, керувати програмним забезпеченням та виконувати різні команди. Сучасні клавіатури бувають різних типів: мембранні, механічні, бездротові, геймерські, мультимедійні, програмовані та інші. Мембранні клавіатури використовуються в більшості ноутбуків та деяких настільних комп'ютерів. Вони легкі, тихі та зручні для друку. Механічні клавіатури використовуються геймерами та професіоналами, які цінують тактильну відповідь та високу швидкість відгуку.</div>
-        </div>
-        <div class="device">
-            <img src="https://images.prom.ua/3133910007_w640_h640_besprovodnaya-kompyuternaya-mysh.jpg" alt="Мишка">
-            <div class="device-title">Мишка</div>
-            <div class="device-description mouse-description">Комп'ютерна миша - це важливий пристрій введення, який дозволяє користувачам навігувати та взаємодіяти з комп'ютерним інтерфейсом. Сучасні комп'ютерні миші бувають різних типів: оптичні, лазерні, бездротові, геймерські, трекболи та інші. Оптичні та лазерні миші використовують світло для відстеження руху, тоді як бездротові миші використовують радіо або інфрачервоні сигнали для комунікації з комп'ютером.
-    Геймерські миші часто мають додаткові кнопки та високу частоту опитування для кращої точності та швидкості.</div>
-     </div>
-        </div>
-        <div class="device">
-            <img src="https://i1.adis.ws/i/canon/pixma-ts7650i-ambient-usability-62921-gi_036ce52938a7467297b9978af1d4a3bb" alt="Принтер">
-            <div class="device-title">Принтер</div>
-            <div class="device-description printer-description">Принтер - це зовнішній пристрій комп'ютера, який використовується для створення твердих копій документів, фотографій, графіки та інших об'єктів. Сучасні принтери бувають різних типів: струменеві, лазерні, термічні, 3D-принтери та інші. Струменеві та лазерні принтери використовуються для друку тексту та графіки, тоді як 3D-принтери використовуються для створення тривимірних об'єктів. Термічні принтери використовуються в різних галузях, таких як роздрібна торгівля та медицина, для друку чеків, етикеток та рецептів.</div>
-        </div>
-        <div class="device">
-            <img src="https://finme.ua/wp-content/uploads/2022/08/1-6.jpg" alt="Сканер">
-            <div class="device-title">Сканер</div>
-            <div class="device-description scanner-description">Сканер - це зовнішній пристрій комп'ютера, який використовується для перетворення зображень, друкованих документів або об'єктів у цифровий формат. Сучасні сканери бувають різних типів: планшетні, барабанні, ручні, 3D-сканери та інші. Планшетні та барабанні сканери використовуються для сканування тексту та графіки, тоді як 3D-сканери використовуються для створення тривимірних моделей об'єктів. Ручні сканери використовуються в різних галузях, таких як роздрібна торгівля та логістика, для сканування штрих-кодів та ідентифікаційних кодів. </div>
-        </div>
-        <div class="device">
-            <img src="https://content2.rozetka.com.ua/goods/images/big/8476816.jpg" alt="Веб-камера">
-            <div class="device-title">Веб-камера</div>
-            <div class="device-description webcam-description">Веб-камера - це зовнішній пристрій комп'ютера, який використовується для запису відео та фотографій в режимі реального часу. Сучасні веб-камери бувають різних типів: USB, бездротові, IP-камери, 3D-веб-камери та інші. USB та бездротові веб-камери використовуються для відеозв'язку та стрімінгу, тоді як IP-камери використовуються для відеоспостереження. 3D-веб-камери використовуються для створення тривимірних відео та віртуальної реальності.</div>
-        </div>
-        <div class="device">
-            <img src="https://huion.com.ua/image/data/Blogs/0_1_9.jpg" alt="Графічний планшет">
-            <div class="device-title">Графічний планшет</div>
-            <div class="device-description graphic-tablet-description">Графічний планшет - це вхідний пристрій комп'ютера, який дозволяє користувачам ручно вводити графічні дані, малюючи на планшеті за допомогою спеціального пера або стилуса. Сучасні графічні планшети бувають різних типів: провідні, бездротові, з екраном, без екрану та інші. Графічні планшети використовуються художниками, дизайнерами та іншими професіоналами для створення цифрових малюнків та ілюстрацій. Вони також використовуються в освіті та бізнесі для створення презентацій та демонстрацій.</div>
-        </div>
-        <div class="device">
-            <img src="https://vsviti.com.ua/wp-content/uploads/2022/11/top-10-kolonok-pc-01.png" alt="Колонки">
-            <div class="device-title">Колонки</div>
-            <div class="device-description speakers-description">Колонки до ПК - це зовнішні пристрої, які використовуються для відтворення звуку з комп'ютера. Сучасні колонки до ПК бувають різних типів: стерео, сабвуфери, саундбари, 5.1, 7.1 та інші. Стерео та саундбари використовуються для відтворення музики та звуку відео, тоді як 5.1 та 7.1 використовуються для створення об'ємного звуку в кіно та іграх. Сабвуфери використовуються для відтворення низьких частот, що додає глибину звуку.</div>
-        </div>
-        <div class="device">
-            <img src="https://s.ek.ua/posts/files/5613/wide_pic.jpg" alt="Мікрофон">
-            <div class="device-title">Мікрофон</div>
-            <div class="device-description microphone-description">Мікрофон - це пристрій, який перетворює звукові хвилі в електричний сигнал. Сучасні мікрофони бувають різних типів: динамічні, конденсаторні, ленточні, п'єзоелектричні, електретні та інші. Динамічні та конденсаторні мікрофони використовуються для запису вокалу та інструментів, тоді як ленточні мікрофони використовуються для високоякісного студійного запису. Електретні мікрофони використовуються в мобільних телефонах, гарнітурах та іншому портативному обладнанні.</div>
-        </div>
-    </div>
-    
-    <script>
-    // JavaScript для відкриття та закриття випливаючого вікна
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-    
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-    
-    // Закриття вікна, якщо користувач клікає поза вікном
-    window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = "none";
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пристрої</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe; 
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .content {
+            padding-top: 60px; /* Відступ зверху для навігаційної стрічки */
+        }
+        .device {
+            text-align: center;
+            margin: 20px;
+        }
+        .device img {
+            max-width: 300px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+        .device-title {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .device-description {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        /* Різні кольори та шрифти для кожного пристрою */
+        .monitor-description {
+            color: #FF5733;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .keyboard-description {
+            color: #33FF57;
+            font-family: 'Georgia', serif;
+        }
+        .mouse-description {
+            color: #3357FF;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .printer-description {
+            color: #FF33A6;
+            font-family: 'Verdana', Geneva, sans-serif;
+        }
+        .scanner-description {
+            color: #FFC300;
+            font-family: 'Tahoma', Geneva, sans-serif;
+        }
+        .webcam-description {
+            color: #DAF7A6;
+            font-family: 'Lucida Console', Monaco, monospace;
+        }
+        .graphic-tablet-description {
+            color: #581845;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+        .speakers-description {
+            color: #C70039;
+            font-family: 'Impact', Charcoal, sans-serif;
+        }
+        .microphone-description {
+            color: #900C3F;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Верхня навігаційна стрічка -->
+<div class="navbar">
+    <a href="1.html">Головна</a>
+    <a onclick="openModal('aboutMeModal')">Про мене</a>
+    <a href="2.html">Пристрої</a>
+    <a href="3.html">Детальніше</a>
+</div>
+
+<!-- Випливаюче вікно "Про мене" -->
+<div id="aboutMeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutMeModal')">&times;</span>
+    <h2>Про мене</h2>
+    <img src="1.jpg" alt="Моя фотографія" style="max-width: 100%; height: auto;">
+    <p>Я Кузьомка Ірина мені 17років. Я навчаюся у Вищому професійному училищі №1, яке знаходиться в м.Рівне.</p>
+  </div>
+</div>
+
+<!-- Основний вміст сторінки -->
+<div class="content">
+    <div class="device">
+        <img src="https://imgs.sector.sk/files/novinky/0/2019/10-4-20-54-72//aky-monitor-kupit-na-jesen-201-207322-4796106.jpg" alt="Монітор">
+        <div class="device-title">Монітор</div>
+        <div class="device-description monitor-description">Монітор - це важлива частина комп'ютера, яка дозволяє користувачам бачити візуальний вивід від їхнього пристрою. Вони використовуються для відображення всіх видів інформації, включаючи текст, фотографії, відео та графіку. Сучасні монітори бувають кількох типів: на основі електронно-променевої трубки (CRT), рідкокристалічні (LCD, TFT як підвид LCD), плазмові, проєкційні, OLED-монітори, сенсорні. Плазмові та проєкційні монітори використовують там, де потрібен великий розмір екрана (діагональ метр і більше). Сьогодні користувачі віддають перевагу ЖК-екранів, популярністю користуються LED і OLED дисплеї.</div>
+    </div>
+    <div class="device">
+        <img src="https://journal.ilounge.ua/files/blog/mehanicheskaya-ili-membrannaya-igrovaya-klaviatura-04.webp" alt="Клавіатура">
+        <div class="device-title">Клавіатура</div>
+        <div class="device-description keyboard-description">Клавіатура - це важливий інтерфейс вводу для багатьох пристроїв, включаючи комп'ютери, смартфони та планшети. Вона дозволяє користувачам вводити текст, керувати програмним забезпеченням та виконувати різні команди. Сучасні клавіатури бувають різних типів: мембранні, механічні, бездротові, геймерські, мультимедійні, програмовані та інші. Мембранні клавіатури використовуються в більшості ноутбуків та деяких настільних комп'ютерів. Вони легкі, тихі та зручні для друку. Механічні клавіатури використовуються геймерами та професіоналами, які цінують тактильну відповідь та високу швидкість відгуку.</div>
+    </div>
+    <div class="device">
+        <img src="https://images.prom.ua/3133910007_w640_h640_besprovodnaya-kompyuternaya-mysh.jpg" alt="Мишка">
+        <div class="device-title">Мишка</div>
+        <div class="device-description mouse-description">Комп'ютерна миша - це важливий пристрій введення, який дозволяє користувачам навігувати та взаємодіяти з комп'ютерним інтерфейсом. Сучасні комп'ютерні миші бувають різних типів: оптичні, лазерні, бездротові, геймерські, трекболи та інші. Оптичні та лазерні миші використовують світло для відстеження руху, тоді як бездротові миші використовують радіо або інфрачервоні сигнали для комунікації з комп'ютером.
+Геймерські миші часто мають додаткові кнопки та високу частоту опитування для кращої точності та швидкості.</div>
+ </div>
+    </div>
+    <div class="device">
+        <img src="https://i1.adis.ws/i/canon/pixma-ts7650i-ambient-usability-62921-gi_036ce52938a7467297b9978af1d4a3bb" alt="Принтер">
+        <div class="device-title">Принтер</div>
+        <div class="device-description printer-description">Принтер - це зовнішній пристрій комп'ютера, який використовується для створення твердих копій документів, фотографій, графіки та інших об'єктів. Сучасні принтери бувають різних типів: струменеві, лазерні, термічні, 3D-принтери та інші. Струменеві та лазерні принтери використовуються для друку тексту та графіки, тоді як 3D-принтери використовуються для створення тривимірних об'єктів. Термічні принтери використовуються в різних галузях, таких як роздрібна торгівля та медицина, для друку чеків, етикеток та рецептів.</div>
+    </div>
+    <div class="device">
+        <img src="https://finme.ua/wp-content/uploads/2022/08/1-6.jpg" alt="Сканер">
+        <div class="device-title">Сканер</div>
+        <div class="device-description scanner-description">Сканер - це зовнішній пристрій комп'ютера, який використовується для перетворення зображень, друкованих документів або об'єктів у цифровий формат. Сучасні сканери бувають різних типів: планшетні, барабанні, ручні, 3D-сканери та інші. Планшетні та барабанні сканери використовуються для сканування тексту та графіки, тоді як 3D-сканери використовуються для створення тривимірних моделей об'єктів. Ручні сканери використовуються в різних галузях, таких як роздрібна торгівля та логістика, для сканування штрих-кодів та ідентифікаційних кодів. </div>
+    </div>
+    <div class="device">
+        <img src="https://content2.rozetka.com.ua/goods/images/big/8476816.jpg" alt="Веб-камера">
+        <div class="device-title">Веб-камера</div>
+        <div class="device-description webcam-description">Веб-камера - це зовнішній пристрій комп'ютера, який використовується для запису відео та фотографій в режимі реального часу. Сучасні веб-камери бувають різних типів: USB, бездротові, IP-камери, 3D-веб-камери та інші. USB та бездротові веб-камери використовуються для відеозв'язку та стрімінгу, тоді як IP-камери використовуються для відеоспостереження. 3D-веб-камери використовуються для створення тривимірних відео та віртуальної реальності.</div>
+    </div>
+    <div class="device">
+        <img src="https://huion.com.ua/image/data/Blogs/0_1_9.jpg" alt="Графічний планшет">
+        <div class="device-title">Графічний планшет</div>
+        <div class="device-description graphic-tablet-description">Графічний планшет - це вхідний пристрій комп'ютера, який дозволяє користувачам ручно вводити графічні дані, малюючи на планшеті за допомогою спеціального пера або стилуса. Сучасні графічні планшети бувають різних типів: провідні, бездротові, з екраном, без екрану та інші. Графічні планшети використовуються художниками, дизайнерами та іншими професіоналами для створення цифрових малюнків та ілюстрацій. Вони також використовуються в освіті та бізнесі для створення презентацій та демонстрацій.</div>
+    </div>
+    <div class="device">
+        <img src="https://vsviti.com.ua/wp-content/uploads/2022/11/top-10-kolonok-pc-01.png" alt="Колонки">
+        <div class="device-title">Колонки</div>
+        <div class="device-description speakers-description">Колонки до ПК - це зовнішні пристрої, які використовуються для відтворення звуку з комп'ютера. Сучасні колонки до ПК бувають різних типів: стерео, сабвуфери, саундбари, 5.1, 7.1 та інші. Стерео та саундбари використовуються для відтворення музики та звуку відео, тоді як 5.1 та 7.1 використовуються для створення об'ємного звуку в кіно та іграх. Сабвуфери використовуються для відтворення низьких частот, що додає глибину звуку.</div>
+    </div>
+    <div class="device">
+        <img src="https://s.ek.ua/posts/files/5613/wide_pic.jpg" alt="Мікрофон">
+        <div class="device-title">Мікрофон</div>
+        <div class="device-description microphone-description">Мікрофон - це пристрій, який перетворює звукові хвилі в електричний сигнал. Сучасні мікрофони бувають різних типів: динамічні, конденсаторні, ленточні, п'єзоелектричні, електретні та інші. Динамічні та конденсаторні мікрофони використовуються для запису вокалу та інструментів, тоді як ленточні мікрофони використовуються для високоякісного студійного запису. Електретні мікрофони використовуються в мобільних телефонах, гарнітурах та іншому портативному обладнанні.</div>
+    </div>
+</div>
+
+<script>
+// JavaScript для відкриття та закриття випливаючого вікна
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Закриття вікна, якщо користувач клікає поза вікном
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
     }
-    </script>
-    
-    </body>
+}
+</script>
+
+</body>
 </html>
